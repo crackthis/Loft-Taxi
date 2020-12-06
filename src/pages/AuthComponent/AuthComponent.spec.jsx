@@ -1,10 +1,10 @@
 import React from "react";
-import { Login } from "./Login";
+import { AuthComponent } from "./AuthComponent";
 import { render } from "@testing-library/react";
 
-describe("Login", () => {
+describe("AuthComponent", () => {
     it("render correctly", () => {
-        const { getByLabelText } = render(<Login />)
+        const { getByLabelText } = render(<AuthComponent />)
 
         expect(getByLabelText('Email:')).toHaveAttribute('name', 'email');
         expect(getByLabelText('Password:')).toHaveAttribute('name', 'password');

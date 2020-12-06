@@ -1,5 +1,5 @@
 import React from "react";
-import {Login} from "../../pages/Login/Login";
+import {AuthComponent} from "../../pages/AuthComponent/AuthComponent";
 import {Home} from "../../pages/About/Home";
 import {Profile} from "../../pages/Profile/Profile";
 

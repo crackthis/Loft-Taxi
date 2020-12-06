@@ -11,29 +11,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5103b238-3c93-4b4e-94b8-2f3c393a1713" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/button/button.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/input/input.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/loginForm/loginForm.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/loginForm/loginForm.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/About/Home.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/About/Home.spec.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Login/Login.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Login/Login.spec.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Profile/Profile.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Profile/Profile.spec.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/registrationForm/registrationForm.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/registrationForm/registrationForm.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/AuthComponent/AuthComponent.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/About.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/button/button.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/About.spec.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/header.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.spec.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.spec.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/heroLogo/heroLogo.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Home.spec.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/heroLogo/heroLogo.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/input/input.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Profile.spec.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Login/Login.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/header.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/heroLogo/heroLogo.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/heroLogo/heroLogo.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/loginForm/loginForm.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/loginForm/loginForm.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/loginForm/loginForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/loginForm/loginForm.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Login/Login.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AuthComponent/AuthComponent.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Login/Login.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Login/Login.spec.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AuthComponent/AuthComponent.spec.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -157,7 +149,8 @@
       <workItem from="1607103829224" duration="1686000" />
       <workItem from="1607121839308" duration="2983000" />
       <workItem from="1607178496748" duration="184000" />
-      <workItem from="1607191472106" duration="12391000" />
+      <workItem from="1607191472106" duration="16842000" />
+      <workItem from="1607294868480" duration="30000" />
     </task>
     <servers />
   </component>

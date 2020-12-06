@@ -7,7 +7,7 @@ export class LoginForm extends React.Component {
 
     render() {
         return <>
-            <form className="loginForm">
+            <form className="form">
                 <div className="title">Войти</div>
                 <div className="inputComp">
                     <Input forWhat="email" labelName="Email" id="email" inputWidth="355px" typeAttr="email" inputName="email" />
@@ -18,10 +18,10 @@ export class LoginForm extends React.Component {
                 <div className="restore">
                     <a href="#" className="restore-btn">Забыли пароль?</a>
                 </div>
-                <div className="enter-btn">
+                <div className="enter">
                     <Button name="Войти" typeAttr="submit" />
                 </div>
-                <div className="registration">Новый пользователь? <a href="#" className="registration-btn">Регистрация</a></div>
+                <div className="subtitle">Новый пользователь? <a href="#" onClick={() => this.props.setForm('registration')} className="subtitle-btn">Регистрация</a></div>
             </form>
         </>
     }
