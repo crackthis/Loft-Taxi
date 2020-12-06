@@ -11,8 +11,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5103b238-3c93-4b4e-94b8-2f3c393a1713" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/button/button.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/input/input.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/loginForm/loginForm.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/loginForm/loginForm.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/About/Home.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/About/Home.spec.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Login/Login.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Login/Login.spec.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Profile/Profile.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Profile/Profile.spec.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/About.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/button/button.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/About.spec.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/header.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.spec.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.spec.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/heroLogo/heroLogo.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Home.spec.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/heroLogo/heroLogo.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/input/input.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Profile.spec.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Login/Login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,11 +44,21 @@
   <component name="ComposerSettings">
     <execution />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="PostCSS File" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1l7ITlvpXFXiSv1UO1lqPUhxUSx" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -35,14 +67,80 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/node_modules/react-scripts" />
     <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/pages/Profile" />
+      <recent name="$PROJECT_DIR$/src/pages/About" />
+      <recent name="$PROJECT_DIR$/src/pages/Login" />
+      <recent name="$PROJECT_DIR$/src/pages" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Jest.App.when clicked on navigation buttons.opens the corresponding page">
+    <configuration name=" About.renders correctly" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/About.spec.jsx" />
+      <test-names>
+        <test-name value=" About" />
+        <test-name value="renders correctly" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="App.renders correctly" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/App.spec.jsx" />
+      <test-names>
+        <test-name value="App" />
+        <test-name value="renders correctly" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="App.when clicked on navigation buttons.opens the corresponding page" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/App.spec.jsx" />
+      <test-names>
+        <test-name value="App" />
+        <test-name value="when clicked on navigation buttons" />
+        <test-name value="opens the corresponding page" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Jest.App.when clicked on navigation buttons.opens the corresponding page" />
+        <item itemvalue="Jest.App.renders correctly" />
+        <item itemvalue="Jest. About.renders correctly" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -53,7 +151,13 @@
       <option name="presentableId" value="Default" />
       <updated>1606941712387</updated>
       <workItem from="1606941713532" duration="449000" />
-      <workItem from="1606947283487" duration="392000" />
+      <workItem from="1606947283487" duration="5493000" />
+      <workItem from="1607074672512" duration="169000" />
+      <workItem from="1607074870223" duration="986000" />
+      <workItem from="1607103829224" duration="1686000" />
+      <workItem from="1607121839308" duration="2983000" />
+      <workItem from="1607178496748" duration="184000" />
+      <workItem from="1607191472106" duration="12391000" />
     </task>
     <servers />
   </component>
