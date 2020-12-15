@@ -1,58 +1,66 @@
-import React from "react";
+import React, {Component} from "react";
 import AuthComponent from "./pages/AuthComponent/AuthComponent";
-import {Home} from "./pages/About/Home";
-import {Profile} from "./pages/Profile/Profile";
+import {Map} from "./pages/Map/Map";
+import {ProfileWithAuth} from "./pages/Profile/Profile";
+import {withAuth} from "./AuthContext";
 import './App.css';
 
 const PAGES = {
-    login: <AuthComponent />,
-    home: <Home />,
-    profile: <Profile />,
+    login: (props) => <AuthComponent {...props} />,
+    map: (props) => <Map {...props} />,
+    profile: (props) => <ProfileWithAuth {...props} />,
 }
 
-class App extends React.Component {
+export class App extends Component {
 
-    state = { currentPage: "login" }
+    state = {
+        currentPage: "login"
+    }
 
     navigateTo = (page) => {
-        this.setState({ currentPage: page })
+        if (this.props.isLoggedIn) {
+            this.setState({ currentPage: page })
+        } else {
+            this.setState({ currentPage: "login" })
+        }
     }
 
     render() {
+        const Page = PAGES[this.state.currentPage];
      return <>
-         {/*<header>*/}
-         {/*    <nav>*/}
-         {/*        <ul>*/}
-         {/*            <li>*/}
-         {/*                <button onClick={() => {this.navigateTo("login")}}>*/}
-         {/*                    AuthComponent*/}
-         {/*                </button>*/}
-         {/*            </li>*/}
-         {/*            <li>*/}
-         {/*                <button onClick={() => {this.navigateTo("home")}}>*/}
-         {/*                    Home*/}
-         {/*                </button>*/}
-         {/*            </li>*/}
-         {/*            <li>*/}
-         {/*                <button onClick={() => {this.navigateTo("profile")}}>*/}
-         {/*                    Profile*/}
-         {/*                </button>*/}
-         {/*            </li>*/}
-         {/*            <li>*/}
-         {/*                <button onClick={() => {this.navigateTo("login")}}>*/}
-         {/*                    Log out*/}
-         {/*                </button>*/}
-         {/*            </li>*/}
-         {/*        </ul>*/}
-         {/*    </nav>*/}
-         {/*</header>*/}
+         <header>
+             <nav>
+                 <ul>
+                     <li>
+                         <button onClick={() => {this.navigateTo("login")}}>
+                             AuthComponent
+                         </button>
+                     </li>
+                     <li>
+                         <button onClick={() => {this.navigateTo("map")}}>
+                             Map
+                         </button>
+                     </li>
+                     <li>
+                         <button onClick={() => {this.navigateTo("profile")}}>
+                             Profile
+                         </button>
+                     </li>
+                     <li>
+                         <button onClick={() => {this.navigateTo("login")}}>
+                             Log out
+                         </button>
+                     </li>
+                 </ul>
+             </nav>
+         </header>
          <main>
              <section>
-                 {PAGES[this.state.currentPage]}
+                 <Page navigateTo={this.navigateTo} />
              </section>
          </main>
      </>;
     }
 }
 
-export default App;
+export default withAuth(App);

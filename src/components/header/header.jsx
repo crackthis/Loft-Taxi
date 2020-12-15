@@ -1,6 +1,6 @@
 import React from "react";
 import {AuthComponent} from "../../pages/AuthComponent/AuthComponent";
-import {Home} from "../../pages/About/Home";
+import {Map} from "../../pages/Map/Map";
 import {Profile} from "../../pages/Profile/Profile";
 
 
