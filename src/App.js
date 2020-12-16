@@ -13,42 +13,33 @@ const PAGES = {
 
 export class App extends Component {
 
-    state = {
-        currentPage: "login"
-    }
-
-    navigateTo = (page) => {
-        if (this.props.isLoggedIn) {
-            this.setState({ currentPage: page })
-        } else {
-            this.setState({ currentPage: "login" })
-        }
-    }
+    // navigateTo = (page) => {
+    //     if (this.props.isLoggedIn) {
+    //         this.setState({ currentPage: page })
+    //     } else {
+    //         this.setState({ currentPage: "login" })
+    //     }
+    // }
 
     render() {
-        const Page = PAGES[this.state.currentPage];
+        const Page = PAGES[this.props.page];
      return <>
          <header>
              <nav>
                  <ul>
                      <li>
-                         <button onClick={() => {this.navigateTo("login")}}>
+                         <button onClick={() => {this.props.setPage("login")}}>
                              AuthComponent
                          </button>
                      </li>
                      <li>
-                         <button onClick={() => {this.navigateTo("map")}}>
+                         <button onClick={() => {this.props.setPage("map")}}>
                              Map
                          </button>
                      </li>
                      <li>
-                         <button onClick={() => {this.navigateTo("profile")}}>
+                         <button onClick={() => {this.props.setPage("profile")}}>
                              Profile
-                         </button>
-                     </li>
-                     <li>
-                         <button onClick={() => {this.navigateTo("login")}}>
-                             Log out
                          </button>
                      </li>
                  </ul>
@@ -56,7 +47,7 @@ export class App extends Component {
          </header>
          <main>
              <section>
-                 <Page navigateTo={this.navigateTo} />
+                 <Page />
              </section>
          </main>
      </>;

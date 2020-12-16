@@ -1,7 +1,8 @@
 import React from "react";
-import { Button } from "../button/button";
-import { Input } from "../input/input";
+import { Button } from "../../components/button/button";
+import { Input } from "../../components/input/input";
 import './registrationForm.css';
+import PropTypes from "prop-types";
 
 export class RegistrationForm extends React.Component {
 
@@ -25,4 +26,8 @@ export class RegistrationForm extends React.Component {
             </form>
         </>
     }
+}
+
+RegistrationForm.propTypes = {
+    setForm: PropTypes.func,
 }

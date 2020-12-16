@@ -5,7 +5,7 @@ export class Profile extends Component {
 
     unauthenticate = () => {
         this.props.logOut();
-        this.props.navigateTo("login");
+        this.props.setPage("login");
     }
 
     render() {

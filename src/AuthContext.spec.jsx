@@ -28,4 +28,33 @@ describe("AuthContext", () => {
             expect(isLoggedIn).toBe(true)
         })
     })
+    describe("#logOut", () => {
+        it("sets 'isLoggedIn' to true", () => {
+            let isLoggedIn;
+            let logOut;
+            let logIn;
+            render(
+                <AuthProvider>
+                    <AuthContext.Consumer>
+                        {(value) => {
+                            isLoggedIn = value.isLoggedIn;
+                            logIn = value.logIn;
+                            logOut = value.logOut;
+                            return null;
+                        }}
+                    </AuthContext.Consumer>
+                </AuthProvider>
+            )
+
+            expect(isLoggedIn).toBe(false)
+            act(() => {
+                logIn("valid@email.com", "correctpassword");
+            })
+            expect(isLoggedIn).toBe(true)
+            act(() => {
+                logOut();
+            })
+            expect(isLoggedIn).toBe(false)
+        })
+    })
 })

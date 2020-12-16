@@ -1,12 +1,13 @@
 import React from "react";
-import { Button } from "../button/button";
-import { Input } from "../input/input";
+import { Button } from "../../components/button/button";
+import { Input } from "../../components/input/input";
 import './loginForm.css';
 import {withAuth} from "../../AuthContext";
+import PropTypes from "prop-types";
 
 export class LoginForm extends React.Component {
     goToProfile = () => {
-        this.props.navigateTo("profile");
+        this.props.setPage("profile");
     }
 
     authenticate = (event) => {
@@ -21,7 +22,7 @@ export class LoginForm extends React.Component {
             {
                 this.props.isLoggedIn ? (
                     <p>
-                        You are logged in <button onClick={() => this.props.navigateTo("profile")}>Go To Profile</button>
+                        You are logged in <button onClick={() => this.goToProfile()}>Go To Profile</button>
                     </p>
                 ) : (
                     <form className="form" onSubmit={this.authenticate}>
@@ -48,4 +49,9 @@ export class LoginForm extends React.Component {
     }
 }
 
-export const LoginWithAuth = withAuth(LoginForm)
+LoginForm.propTypes = {
+    navigateTo: PropTypes.func,
+    setForm: PropTypes.func,
+}
+
+export const LoginWithAuth = withAuth(LoginForm);

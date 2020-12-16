@@ -1,8 +1,8 @@
 import React from "react";
-import {LoginWithAuth} from "../../components/loginForm/loginForm";
+import {LoginWithAuth} from "../loginForm/loginForm";
 import { HeroLogo } from "../../components/heroLogo/heroLogo";
 import './AuthComponent.css';
-import {RegistrationForm} from "../../components/registrationForm/registrationForm";
+import {RegistrationForm} from "../registrationForm/registrationForm";
 
 class AuthComponent extends React.Component {
 
@@ -14,6 +14,7 @@ class AuthComponent extends React.Component {
     }
 
     setForm = (name) => {
+        console.log(this.props);
         this.setState({ activeForm: name });
     }
 
@@ -22,7 +23,7 @@ class AuthComponent extends React.Component {
         return <>
             <div className="login">
                 <HeroLogo width="33%" />
-                {this.state.activeForm === 'login' && <LoginWithAuth setForm={this.setForm} navigateTo={this.props.navigateTo} />}
+                {this.state.activeForm === 'login' && <LoginWithAuth setForm={this.setForm} />}
                 {this.state.activeForm === 'registration' && <RegistrationForm setForm={this.setForm} />}
             </div>
         </>
