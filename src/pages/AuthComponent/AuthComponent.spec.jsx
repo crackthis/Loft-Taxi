@@ -1,13 +1,13 @@
 import React from "react";
+import { render, fireEvent } from "@testing-library/react";
 import AuthComponent from "./AuthComponent";
-import { render } from "@testing-library/react";
+
+jest.mock("../loginForm/loginForm", () => ({LoginForm: () => <div>Login content</div>}))
+jest.mock("../registrationForm/registrationForm", () => ({RegistrationForm: () => <div>Reg content</div>}))
 
 describe("AuthComponent", () => {
-    it("render correctly", () => {
-        const { container } = render(<AuthComponent />);
-        console.log(container);
-
-        expect(getByLabelText('Email:')).toHaveAttribute('name', 'email');
-        expect(getByLabelText('Password:')).toHaveAttribute('name', 'password');
-    })
+    it("renders correctly", () => {
+        const {container} = render(<AuthComponent />);
+        expect(container.innerHTML).toMatch("Login content");
+    });
 })
