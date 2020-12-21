@@ -5,45 +5,41 @@ import {ProfileWithAuth} from "./pages/Profile/Profile";
 import {connect} from "react-redux";
 import PropTypes from "prop-types";
 import './App.css';
-
-const PAGES = {
-    login: (props) => <AuthComponent {...props} />,
-    map: (props) => <Map {...props} />,
-    profile: (props) => <ProfileWithAuth {...props} />,
-}
+import { Switch, Route, Link } from "react-router-dom";
+import { PrivateRoute } from "./PrivateRoute";
 
 export class App extends Component {
-    setPage = (next) => {
-        this.props.setPage(next);
-    }
 
     render() {
-        const Page = PAGES[this.props.page];
      return <>
          <header>
              <nav>
                  <ul>
                      <li>
-                         <button onClick={() => {this.setPage("login")}}>
-                             AuthComponent
-                         </button>
+                         <Link to="/">
+                             Home
+                         </Link>
                      </li>
                      <li>
-                         <button onClick={() => {this.setPage("map")}}>
+                         <Link to="/map">
                              Map
-                         </button>
+                         </Link>
                      </li>
                      <li>
-                         <button onClick={() => {this.setPage("profile")}}>
+                         <Link to="/profile">
                              Profile
-                         </button>
+                         </Link>
                      </li>
                  </ul>
              </nav>
          </header>
          <main data-testid="container">
              <section>
-                 <Page />
+                 <Switch>
+                     <Route exact path="/" component={AuthComponent} />
+                     <PrivateRoute path="/map" component={Map} />
+                     <PrivateRoute exact path="/profile" component={ProfileWithAuth} />
+                 </Switch>
              </section>
          </main>
      </>;

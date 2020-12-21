@@ -4,12 +4,10 @@ import { Input } from "../../components/input/input";
 import './loginForm.css';
 import PropTypes from "prop-types";
 import {connect} from 'react-redux';
-import {authenticate } from "../../actions";
+import {authenticate} from "../../actions";
+import {Link} from "react-router-dom";
 
 export class LoginForm extends React.Component {
-    goToProfile = () => {
-        this.props.setPage("profile");
-    }
 
     authenticate = (event) => {
         event.preventDefault();
@@ -23,7 +21,7 @@ export class LoginForm extends React.Component {
             {
                 this.props.isLoggedIn ? (
                     <p>
-                        You are logged in <button onClick={() => this.goToProfile()}>Go To Profile</button>
+                        You are logged in <Link to="/profile">Go To Profile</Link>
                     </p>
                 ) : (
                     <form className="form" onSubmit={this.authenticate}>

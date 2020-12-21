@@ -11,10 +11,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5103b238-3c93-4b4e-94b8-2f3c393a1713" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/PrivateRoute.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/authMiddleware.spec.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.spec.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.spec.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Profile/Profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Profile/Profile.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/loginForm/loginForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/loginForm/loginForm.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +77,7 @@
       <recent name="$PROJECT_DIR$/src/pages/About" />
     </key>
   </component>
-  <component name="RunManager" selected="Jest.App">
+  <component name="RunManager" selected="Jest.App.when clicked on navigation buttons">
     <configuration name="App" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -85,68 +91,69 @@
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="AuthComponent" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+    <configuration name="App.when clicked on navigation buttons" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
       <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
       <working-dir value="$PROJECT_DIR$" />
       <envs />
       <scope-kind value="SUITE" />
-      <test-file value="$PROJECT_DIR$/src/pages/AuthComponent/AuthComponent.spec.jsx" />
+      <test-file value="$PROJECT_DIR$/src/App.spec.jsx" />
       <test-names>
-        <test-name value="AuthComponent" />
+        <test-name value="App" />
+        <test-name value="when clicked on navigation buttons" />
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="AuthComponent.renders correctly" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <node-options value="" />
-      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
-      <working-dir value="$PROJECT_DIR$" />
-      <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/src/pages/AuthComponent/AuthComponent.spec.jsx" />
-      <test-names>
-        <test-name value="AuthComponent" />
-        <test-name value="renders correctly" />
-      </test-names>
-      <method v="2" />
-    </configuration>
-    <configuration name="AuthContext" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+    <configuration name="authMiddleware" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
       <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
       <working-dir value="$PROJECT_DIR$" />
       <envs />
       <scope-kind value="SUITE" />
-      <test-file value="$PROJECT_DIR$/src/AuthContext.spec.jsx" />
+      <test-file value="$PROJECT_DIR$/src/authMiddleware.spec.js" />
       <test-names>
-        <test-name value="AuthContext" />
+        <test-name value="authMiddleware" />
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="AuthContext.#logIn.sets 'isLoggedIn' to false" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+    <configuration name="authMiddleware.#AUTHENTICATE" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/src/authMiddleware.spec.js" />
+      <test-names>
+        <test-name value="authMiddleware" />
+        <test-name value="#AUTHENTICATE" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="authMiddleware.#AUTHENTICATE.authenticates through api" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
       <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
       <working-dir value="$PROJECT_DIR$" />
       <envs />
       <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/src/AuthContext.spec.jsx" />
+      <test-file value="$PROJECT_DIR$/src/authMiddleware.spec.js" />
       <test-names>
-        <test-name value="AuthContext" />
-        <test-name value="#logIn" />
-        <test-name value="sets 'isLoggedIn' to false" />
+        <test-name value="authMiddleware" />
+        <test-name value="#AUTHENTICATE" />
+        <test-name value="authenticates through api" />
       </test-names>
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Jest.App.when clicked on navigation buttons" />
+        <item itemvalue="Jest.authMiddleware" />
+        <item itemvalue="Jest.authMiddleware.#AUTHENTICATE.authenticates through api" />
+        <item itemvalue="Jest.authMiddleware.#AUTHENTICATE" />
         <item itemvalue="Jest.App" />
-        <item itemvalue="Jest.AuthComponent" />
-        <item itemvalue="Jest.AuthComponent.renders correctly" />
-        <item itemvalue="Jest.AuthContext.#logIn.sets 'isLoggedIn' to false" />
-        <item itemvalue="Jest.AuthContext" />
       </list>
     </recent_temporary>
   </component>
