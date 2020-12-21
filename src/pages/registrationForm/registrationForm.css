@@ -1,0 +1,32 @@
+.title {
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 57px;
+}
+
+.inputComp {
+    margin-bottom: 25px;
+}
+
+.inputComp:last-child {
+    margin-bottom: 13px;
+}
+
+.restore {
+    margin-bottom: 46px;
+    color: #828282;
+    align-self: flex-end;
+    font-size: 16px;
+}
+
+.reg {
+    margin-bottom: 33px;
+}
+
+.reg > .btn {
+    padding: 17px 60px;
+}
+
+.registration-btn:hover {
+    text-decoration: underline;
+}

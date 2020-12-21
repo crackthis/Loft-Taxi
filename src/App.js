@@ -1,25 +1,58 @@
-import logo from './logo.svg';
+import React, {Component} from "react";
+import AuthComponent from "./pages/AuthComponent/AuthComponent";
+import {Map} from "./pages/Map/Map";
+import {ProfileWithAuth} from "./pages/Profile/Profile";
+import {connect} from "react-redux";
+import PropTypes from "prop-types";
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const PAGES = {
+    login: (props) => <AuthComponent {...props} />,
+    map: (props) => <Map {...props} />,
+    profile: (props) => <ProfileWithAuth {...props} />,
 }
 
-export default App;
+export class App extends Component {
+
+    setPage = (next) => {
+        this.props.setPage(next);
+    }
+
+    render() {
+        const Page = PAGES[this.props.page];
+     return <>
+         <header>
+             <nav>
+                 <ul>
+                     <li>
+                         <button onClick={() => {this.setPage("login")}}>
+                             AuthComponent
+                         </button>
+                     </li>
+                     <li>
+                         <button onClick={() => {this.setPage("map")}}>
+                             Map
+                         </button>
+                     </li>
+                     <li>
+                         <button onClick={() => {this.setPage("profile")}}>
+                             Profile
+                         </button>
+                     </li>
+                 </ul>
+             </nav>
+         </header>
+         <main data-testid="container">
+             <section>
+                 <Page />
+             </section>
+         </main>
+     </>;
+    }
+}
+
+App.propTypes = {
+    isLoggedIn: PropTypes.bool
+};
+
+export default connect((state) => ({ isLoggedIn: state.auth.isLoggedIn }))(App);
