@@ -2,8 +2,9 @@ import React from "react";
 import { Button } from "../../components/button/button";
 import { Input } from "../../components/input/input";
 import './loginForm.css';
-import {withAuth} from "../../AuthContext";
 import PropTypes from "prop-types";
+import {connect} from 'react-redux';
+import {authenticate } from "../../actions";
 
 export class LoginForm extends React.Component {
     goToProfile = () => {
@@ -13,7 +14,7 @@ export class LoginForm extends React.Component {
     authenticate = (event) => {
         event.preventDefault();
         const { email, password } = event.target;
-        this.props.logIn(email.value, password.value)
+        this.props.authenticate(email.value, password.value)
     }
 
     render() {
@@ -54,4 +55,7 @@ LoginForm.propTypes = {
     setForm: PropTypes.func,
 }
 
-export const LoginWithAuth = withAuth(LoginForm);
+export const LoginWithAuth = connect(
+    (state) => ({isLoggedIn: state.auth.isLoggedIn}),
+    { authenticate }
+)(LoginForm);

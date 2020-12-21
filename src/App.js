@@ -2,7 +2,8 @@ import React, {Component} from "react";
 import AuthComponent from "./pages/AuthComponent/AuthComponent";
 import {Map} from "./pages/Map/Map";
 import {ProfileWithAuth} from "./pages/Profile/Profile";
-import {withAuth} from "./AuthContext";
+import {connect} from "react-redux";
+import PropTypes from "prop-types";
 import './App.css';
 
 const PAGES = {
@@ -13,13 +14,9 @@ const PAGES = {
 
 export class App extends Component {
 
-    // navigateTo = (page) => {
-    //     if (this.props.isLoggedIn) {
-    //         this.setState({ currentPage: page })
-    //     } else {
-    //         this.setState({ currentPage: "login" })
-    //     }
-    // }
+    setPage = (next) => {
+        this.props.setPage(next);
+    }
 
     render() {
         const Page = PAGES[this.props.page];
@@ -28,24 +25,24 @@ export class App extends Component {
              <nav>
                  <ul>
                      <li>
-                         <button onClick={() => {this.props.setPage("login")}}>
+                         <button onClick={() => {this.setPage("login")}}>
                              AuthComponent
                          </button>
                      </li>
                      <li>
-                         <button onClick={() => {this.props.setPage("map")}}>
+                         <button onClick={() => {this.setPage("map")}}>
                              Map
                          </button>
                      </li>
                      <li>
-                         <button onClick={() => {this.props.setPage("profile")}}>
+                         <button onClick={() => {this.setPage("profile")}}>
                              Profile
                          </button>
                      </li>
                  </ul>
              </nav>
          </header>
-         <main>
+         <main data-testid="container">
              <section>
                  <Page />
              </section>
@@ -54,4 +51,8 @@ export class App extends Component {
     }
 }
 
-export default withAuth(App);
+App.propTypes = {
+    isLoggedIn: PropTypes.bool
+};
+
+export default connect((state) => ({ isLoggedIn: state.auth.isLoggedIn }))(App);

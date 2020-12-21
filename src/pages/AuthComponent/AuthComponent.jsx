@@ -1,10 +1,10 @@
-import React from "react";
+import React, { Component } from "react";
 import {LoginWithAuth} from "../loginForm/loginForm";
 import { HeroLogo } from "../../components/heroLogo/heroLogo";
 import './AuthComponent.css';
 import {RegistrationForm} from "../registrationForm/registrationForm";
 
-class AuthComponent extends React.Component {
+export class AuthComponent extends Component {
 
     constructor(props) {
         super(props);
