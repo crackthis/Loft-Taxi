@@ -13,7 +13,7 @@ const PAGES = {
 }
 
 export class App extends Component {
-
+git
     setPage = (next) => {
         this.props.setPage(next);
     }

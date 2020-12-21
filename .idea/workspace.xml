@@ -11,23 +11,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5103b238-3c93-4b4e-94b8-2f3c393a1713" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/actions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/api.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/authMiddleware.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/reducers/auth.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/reducers/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.spec.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.spec.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AuthContext.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AuthContext.spec.jsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Profile/Profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Profile/Profile.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/loginForm/loginForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/loginForm/loginForm.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/auth.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -187,7 +174,7 @@
       <workItem from="1607907518768" duration="6656000" />
       <workItem from="1607993825362" duration="11662000" />
       <workItem from="1608153474816" duration="7291000" />
-      <workItem from="1608391711672" duration="5703000" />
+      <workItem from="1608391711672" duration="8458000" />
     </task>
     <servers />
   </component>
