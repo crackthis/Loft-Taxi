@@ -1,5 +1,6 @@
 import React, {Component} from "react";
-import {withAuth} from "../../AuthContext";
+import {connect} from "react-redux";
+import {logOut} from "../../actions";
 
 export class Profile extends Component {
 
@@ -14,4 +15,7 @@ export class Profile extends Component {
     }
 }
 
-export const ProfileWithAuth = withAuth(Profile);
+export const ProfileWithAuth = connect(
+    null,
+    {logOut}
+)(Profile);

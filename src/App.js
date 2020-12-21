@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import AuthComponent from "./pages/AuthComponent/AuthComponent";
 import {Map} from "./pages/Map/Map";
 import {ProfileWithAuth} from "./pages/Profile/Profile";
-import {withAuth} from "./AuthContext";
+import {connect} from "react-redux";
 import PropTypes from "prop-types";
 import './App.css';
 
@@ -55,4 +55,4 @@ App.propTypes = {
     isLoggedIn: PropTypes.bool
 };
 
-export default withAuth(App);
+export default connect((state) => ({ isLoggedIn: state.auth.isLoggedIn }))(App);
