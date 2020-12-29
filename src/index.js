@@ -6,14 +6,18 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from "react-router-dom";
 import { Provider } from 'react-redux';
 import { store } from "./store";
+import { theme } from "loft-taxi-mui-theme"; // Импортируем саму тему
+import { MuiThemeProvider } from "@material-ui/core/styles";
 
 ReactDOM.render(
   <React.StrictMode>
-      <BrowserRouter>
-          <Provider store={store}>
-              <App />
-          </Provider>
-      </BrowserRouter>
+      <MuiThemeProvider theme={theme}>
+          <BrowserRouter>
+              <Provider store={store}>
+                  <App />
+              </Provider>
+          </BrowserRouter>
+      </MuiThemeProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

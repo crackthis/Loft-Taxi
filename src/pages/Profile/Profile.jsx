@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import {connect} from "react-redux";
 import {logOut} from "../../actions";
+import {HeaderWithAuth} from "../../components/header/header";
 
 export class Profile extends Component {
 
@@ -10,7 +11,10 @@ export class Profile extends Component {
 
     render() {
 
-        return <p>Profile <button onClick={this.unauthenticate}>Log out</button></p>
+        return <>
+            <HeaderWithAuth />
+                <p>Profile</p>
+            </>
     }
 }
 

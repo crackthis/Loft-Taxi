@@ -5,7 +5,7 @@ import './loginForm.css';
 import PropTypes from "prop-types";
 import {connect} from 'react-redux';
 import {authenticate} from "../../actions";
-import {Link} from "react-router-dom";
+import {Link, Redirect} from "react-router-dom";
 
 export class LoginForm extends React.Component {
 
@@ -20,9 +20,7 @@ export class LoginForm extends React.Component {
             <>
             {
                 this.props.isLoggedIn ? (
-                    <p>
-                        You are logged in <Link to="/profile">Go To Profile</Link>
-                    </p>
+                    <Redirect to="/profile" />
                 ) : (
                     <form className="form" onSubmit={this.authenticate}>
                         <div className="title">Войти</div>

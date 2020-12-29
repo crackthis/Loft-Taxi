@@ -1,7 +1,8 @@
-import {LOG_IN, LOG_OUT} from "../actions";
+import {LOG_IN, LOG_OUT, SAVE_TOKEN} from "../actions";
 
 const initialState = {
-    isLoggedIn: false
+    isLoggedIn: false,
+    token: "",
 }
 
 export default function auth(state = initialState, action) {
@@ -11,6 +12,9 @@ export default function auth(state = initialState, action) {
         }
         case LOG_OUT: {
             return {isLoggedIn: false}
+        }
+        case SAVE_TOKEN: {
+            return {...state, token: action.payload}
         }
         default:
             return state

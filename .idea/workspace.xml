@@ -11,15 +11,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5103b238-3c93-4b4e-94b8-2f3c393a1713" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/PrivateRoute.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/authMiddleware.spec.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.spec.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.spec.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/authMiddleware.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/authMiddleware.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/header.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Map/Map.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Map/Map.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Profile/Profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Profile/Profile.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/loginForm/loginForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/loginForm/loginForm.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -77,17 +84,18 @@
       <recent name="$PROJECT_DIR$/src/pages/About" />
     </key>
   </component>
-  <component name="RunManager" selected="Jest.App.when clicked on navigation buttons">
-    <configuration name="App" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Jest.App.renders correctly">
+    <configuration name="App.renders correctly" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
       <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
       <working-dir value="$PROJECT_DIR$" />
       <envs />
-      <scope-kind value="SUITE" />
+      <scope-kind value="TEST" />
       <test-file value="$PROJECT_DIR$/src/App.spec.jsx" />
       <test-names>
         <test-name value="App" />
+        <test-name value="renders correctly" />
       </test-names>
       <method v="2" />
     </configuration>
@@ -149,11 +157,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Jest.App.when clicked on navigation buttons" />
-        <item itemvalue="Jest.authMiddleware" />
         <item itemvalue="Jest.authMiddleware.#AUTHENTICATE.authenticates through api" />
         <item itemvalue="Jest.authMiddleware.#AUTHENTICATE" />
-        <item itemvalue="Jest.App" />
+        <item itemvalue="Jest.authMiddleware" />
+        <item itemvalue="Jest.App.when clicked on navigation buttons" />
+        <item itemvalue="Jest.App.renders correctly" />
       </list>
     </recent_temporary>
   </component>
@@ -182,6 +190,7 @@
       <workItem from="1607993825362" duration="11662000" />
       <workItem from="1608153474816" duration="7291000" />
       <workItem from="1608391711672" duration="8458000" />
+      <workItem from="1608910763134" duration="10685000" />
     </task>
     <servers />
   </component>

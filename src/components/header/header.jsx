@@ -1,36 +1,43 @@
-import React from "react";
-import {AuthComponent} from "../../pages/AuthComponent/AuthComponent";
-import {Map} from "../../pages/Map/Map";
-import {Profile} from "../../pages/Profile/Profile";
+import React, {Component} from "react";
+import {Link} from "react-router-dom";
+import {connect} from "react-redux";
+import {logOut} from "../../actions";
+import {Logo} from "loft-taxi-mui-theme/src/Logo";
 
+export class Header extends Component {
+    unauthenticate = () => {
+        this.props.logOut();
+    }
 
-export const Header = () => {
-    return (
-        <header>
-            <nav>
-                <ul>
-                    <li>
-                        <button onClick={() => {this.navigateTo("login")}}>
-                            Login
-                        </button>
-                    </li>
-                    <li>
-                        <button onClick={() => {this.navigateTo("about")}}>
-                            About
-                        </button>
-                    </li>
-                    <li>
-                        <button onClick={() => {this.navigateTo("profile")}}>
-                            Profile
-                        </button>
-                    </li>
-                    <li>
-                        <button onClick={() => {this.navigateTo("login")}}>
-                            Log out
-                        </button>
-                    </li>
-                </ul>
-            </nav>
-        </header>
-    )
+    render() {
+        return <>
+            <Logo />
+            <header>
+                <nav>
+                    <ul>
+                        <li>
+                            <Link to="/map">
+                                Map
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to="/profile">
+                                Profile
+                            </Link>
+                        </li>
+                        <li>
+                            <button onClick={this.unauthenticate}>
+                                Log out
+                            </button>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            </>
+    }
 }
+
+export const HeaderWithAuth = connect(
+    null,
+    {logOut}
+)(Header);
