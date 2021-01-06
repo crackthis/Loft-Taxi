@@ -1,11 +1,11 @@
 import React, {Component} from "react";
-import AuthComponent from "./pages/AuthComponent/AuthComponent";
+import { AuthComponentWithAuth } from "./pages/AuthComponent/AuthComponent";
 import {Map} from "./pages/Map/Map";
 import {ProfileWithAuth} from "./pages/Profile/Profile";
 import {connect} from "react-redux";
 import PropTypes from "prop-types";
 import './App.css';
-import { Switch, Route, Link } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import { PrivateRoute } from "./PrivateRoute";
 
 export class App extends Component {
@@ -14,7 +14,7 @@ export class App extends Component {
      return <>
          <main data-testid="container" className="all-sections">
              <Switch>
-                 <Route exact path="/" component={AuthComponent} />
+                 <Route exact path="/" component={AuthComponentWithAuth} />
                  <PrivateRoute path="/map" component={Map} />
                  <PrivateRoute exact path="/profile" component={ProfileWithAuth} />
              </Switch>

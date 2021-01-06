@@ -4,4 +4,5 @@
     align-items: center;
     justify-content: space-between;
     background: url("/src/shares/content/map.jpg") center center / cover no-repeat;
+    width: 100%;
 }

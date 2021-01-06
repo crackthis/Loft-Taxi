@@ -5,14 +5,15 @@ import './loginForm.css';
 import PropTypes from "prop-types";
 import {connect} from 'react-redux';
 import {authenticate} from "../../actions";
-import {Link, Redirect} from "react-router-dom";
+import {Redirect} from "react-router-dom";
+
 
 export class LoginForm extends React.Component {
 
-    authenticate = (event) => {
+    authenticate = async (event) => {
         event.preventDefault();
         const { email, password } = event.target;
-        this.props.authenticate(email.value, password.value)
+        await this.props.authenticate(email.value, password.value);
     }
 
     render() {
@@ -52,6 +53,8 @@ LoginForm.propTypes = {
 }
 
 export const LoginWithAuth = connect(
-    (state) => ({isLoggedIn: state.auth.isLoggedIn}),
+    (state) => ({
+        isLoggedIn: state.auth.isLoggedIn
+    }),
     { authenticate }
 )(LoginForm);

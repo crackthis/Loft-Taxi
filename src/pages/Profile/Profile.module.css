@@ -1,0 +1,29 @@
+.logo {
+    width: 34px;
+    height: 34px;
+}
+
+.pic-item {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.chip {
+    width: 29px;
+    height: 26px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cardnum {
+    width: 100%;
+    font-size: 21px;
+}
+
+.carddate {
+    font-size: 12px;
+}

@@ -1,8 +1,10 @@
 import React, { Component } from "react";
 import {LoginWithAuth} from "../loginForm/loginForm";
+import {RegWithAuth} from "../registrationForm/registrationForm";
 import { HeroLogo } from "../../components/heroLogo/heroLogo";
 import './AuthComponent.css';
-import {RegistrationForm} from "../registrationForm/registrationForm";
+import {connect} from "react-redux";
+
 
 export class AuthComponent extends Component {
 
@@ -14,7 +16,6 @@ export class AuthComponent extends Component {
     }
 
     setForm = (name) => {
-        console.log(this.props);
         this.setState({ activeForm: name });
     }
 
@@ -24,10 +25,10 @@ export class AuthComponent extends Component {
             <div className="login">
                 <HeroLogo width="33%" />
                 {this.state.activeForm === 'login' && <LoginWithAuth setForm={this.setForm} />}
-                {this.state.activeForm === 'registration' && <RegistrationForm setForm={this.setForm} />}
+                {this.state.activeForm === 'registration' && <RegWithAuth setForm={this.setForm} />}
             </div>
         </>
     }
 }
 
-export default AuthComponent;
+export const AuthComponentWithAuth = connect()(AuthComponent)

@@ -1,0 +1,26 @@
+.header {
+    background: #1C1A19;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+}
+
+.logo-link {
+    margin-left: 27px;
+}
+
+.logo-link:hover {
+    filter: inherit;
+}
+
+.header-item {
+    cursor: pointer;
+    color: #fff;
+    font-weight: 400;
+    font-size: 21px;
+}
+
+.header-item:hover {
+    color: #FDBF5A;
+    text-decoration: none;
+}

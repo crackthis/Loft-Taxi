@@ -2,33 +2,37 @@ import React, {Component} from "react";
 import {Link} from "react-router-dom";
 import {connect} from "react-redux";
 import {logOut} from "../../actions";
-import {Logo} from "loft-taxi-mui-theme/src/Logo";
+import {Logo} from "../Logo/Logo";
+import "./header.css";
 
 export class Header extends Component {
-    unauthenticate = () => {
+    unauthenticate = (e) => {
+        e.preventDefault();
         this.props.logOut();
     }
 
     render() {
         return <>
-            <Logo />
-            <header>
+            <header className="header">
                 <nav>
-                    <ul>
+                    <Link to="/profile" className="logo-link">
+                        <Logo />
+                    </Link>
+                    <ul className="header-list">
                         <li>
-                            <Link to="/map">
-                                Map
+                            <Link className="header-item" to="/map">
+                                Карта
                             </Link>
                         </li>
                         <li>
-                            <Link to="/profile">
-                                Profile
+                            <Link className="header-item" to="/profile">
+                                Профиль
                             </Link>
                         </li>
                         <li>
-                            <button onClick={this.unauthenticate}>
-                                Log out
-                            </button>
+                            <a className="header-item" onClick={this.unauthenticate}>
+                                Выйти
+                            </a>
                         </li>
                     </ul>
                 </nav>

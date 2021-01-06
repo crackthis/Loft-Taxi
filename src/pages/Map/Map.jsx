@@ -1,6 +1,11 @@
 import React, { Component } from "react";
 import mapboxgl from 'mapbox-gl';
 import {HeaderWithAuth} from "../../components/header/header";
+import styled from "styled-components";
+
+const MapContainer = styled.div`
+    
+`
 
 export class Map extends Component {
     map = null;
@@ -14,7 +19,9 @@ export class Map extends Component {
             style: "mapbox://styles/mapbox/streets-v9",
             center: [30.3056504, 59.9429126], // LED
             zoom: 10,
+            attributionControl: false
         });
+        this.map.resize();
     }
 
     componentWillUnmount() {
@@ -25,9 +32,9 @@ export class Map extends Component {
         return (
             <>
                 <HeaderWithAuth />
-                <div className="map-wrapper">
+                <MapContainer>
                     <div data-testid="map" className="map" ref={this.mapContainer} />
-                </div>
+                </MapContainer>
                 </>
         );
     }
