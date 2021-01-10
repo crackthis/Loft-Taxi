@@ -1,6 +1,6 @@
 import { takeEvery, call } from 'redux-saga/effects';
-import {serverSignUp} from "./api";
-import {SIGN_UP} from "./actions";
+import {serverSignUp} from "../api";
+import {SIGN_UP} from "../actions";
 
 export function* registrationSaga(action) {
     const {email, password, name_user, surname_user} = action.payload;

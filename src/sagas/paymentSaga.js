@@ -1,13 +1,12 @@
-import { takeEvery, call, put } from 'redux-saga/effects';
-import {serverSaveCard, serverLoadCard} from "./api";
-import {SAVE_CARD} from "./actions";
+import {takeEvery, call, put} from 'redux-saga/effects';
+import {serverSaveCard} from "../api";
+import {SAVE_CARD, saveCardToState} from "../actions";
 
 export function* saveYourCardSaga(action) {
-    console.log(action);
     const { cardName, expiryDate, cardNumber, cvc, authToken } = action.payload;
     const result = yield call(serverSaveCard, cardNumber, expiryDate, cardName, cvc, authToken);
     if(result.success) {
-        console.log("done");
+        yield put(saveCardToState(cardNumber, expiryDate, cardName, cvc));
     } else {
         console.log("error");
     }

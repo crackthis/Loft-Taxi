@@ -3,7 +3,7 @@ import './button.css';
 
 export const Button = props => {
     return (
-        <button className="btn" type={props.typeAttr}>
+        <button className="btn" type={props.typeAttr} {...props}>
             {props.name}
         </button>
     )

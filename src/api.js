@@ -49,3 +49,21 @@ export const serverLoadCard = async (token) => {
         },
     }).then(res => res.json())
 }
+
+export const serverAddressList = async () => {
+    return fetch(`${url}/addressList`, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json;charset=utf-8'
+        },
+    }).then(res => res.json())
+}
+
+export const serverReadyRoute = async (routeOne, routeTwo) => {
+    return fetch(`${url}/route?address1=${routeOne}&address2=${routeTwo}`, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json;charset=utf-8'
+        },
+    }).then(res => res.json())
+}

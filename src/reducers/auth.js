@@ -1,4 +1,4 @@
-import {LOG_IN, LOG_OUT, SAVE_TOKEN, LOAD_CARD} from "../actions";
+import {LOG_IN, LOG_OUT, SAVE_TOKEN, SAVE_CARD_TO_STATE} from "../actions";
 
 const initialState = {
     isLoggedIn: false,
@@ -15,13 +15,16 @@ export default function auth(state = initialState, action) {
             return {...state, isLoggedIn: true}
         }
         case LOG_OUT: {
+            localStorage.clear();
             return {...state, isLoggedIn: false}
         }
         case SAVE_TOKEN: {
             return {...state, token: action.payload}
         }
-        case LOAD_CARD: {
-            return {...state, action }
+        case SAVE_CARD_TO_STATE: {
+            return {
+                ...state, ...action.payload
+            }
         }
         default:
             return state

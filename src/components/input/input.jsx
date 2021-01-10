@@ -3,9 +3,9 @@ import './input.css';
 
 export const Input = props => {
     return(
-        <div className="input" style={{width: props.inputWidth}}>
-            <label htmlFor={props.forWhat} className="label">{props.labelName}</label>
-            <input id={props.id} type={props.typeAttr} name={props.inputName} className="input-item" {...props}/>
+        <div className="input" style={{width: props.inputwidth}}>
+            <label htmlFor={props.forwhat} className="label">{props.labelname}</label>
+            <input id={props.id} type={props.typeattr} name={props.inputname} className="input-item" {...props}/>
         </div>
     )
 }

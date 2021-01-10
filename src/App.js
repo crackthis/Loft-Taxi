@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import { AuthComponentWithAuth } from "./pages/AuthComponent/AuthComponent";
-import {Map} from "./pages/Map/Map";
+import {MapConnect} from "./pages/Map/Map";
 import {ProfileWithAuth} from "./pages/Profile/Profile";
 import {connect} from "react-redux";
 import PropTypes from "prop-types";
@@ -15,7 +15,7 @@ export class App extends Component {
          <main data-testid="container" className="all-sections">
              <Switch>
                  <Route exact path="/" component={AuthComponentWithAuth} />
-                 <PrivateRoute path="/map" component={Map} />
+                 <PrivateRoute path="/map" component={MapConnect} />
                  <PrivateRoute exact path="/profile" component={ProfileWithAuth} />
              </Switch>
          </main>

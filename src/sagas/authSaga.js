@@ -1,17 +1,20 @@
 import { takeEvery, call, put } from 'redux-saga/effects';
-import {serverLogin} from "./api";
-import {AUTHENTICATE, logIn, saveToken} from "./actions";
+import {serverLoadCard, serverLogin} from "../api";
+import {AUTHENTICATE, logIn, saveCardToState, loadAddressList} from "../actions";
+
 
 export function* authenticateSaga(action) {
     const {email, password} = action.payload;
     const result = yield call(serverLogin, email, password)
-    const resultSuccess = result.success
+    const resultSuccess = result.success;
     if(resultSuccess) {
-        yield put(logIn());
-        yield put(saveToken(result.token));
         localStorage.setItem('email', email);
         localStorage.setItem('password', password);
         localStorage.setItem('token', result.token);
+        const {cardNumber, expiryDate, cardName, cvc} = yield call(serverLoadCard, localStorage.token);
+        yield put(saveCardToState(cardNumber, expiryDate, cardName, cvc));
+        yield put(logIn());
+        yield put(loadAddressList());
     }
 }
 

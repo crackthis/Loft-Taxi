@@ -9,6 +9,8 @@ import Chip from "../../shares/content/Chip.png";
 import {logo, picItem, chip, row, cardnum, carddate} from "./Profile.module.css";
 import {Button} from "../../components/button/button";
 
+
+
 const Title = styled.h1``
 
 const Subtitle = styled.div`
@@ -102,47 +104,51 @@ export class Profile extends Component {
                     <FormCol>
                         <FormRow>
                             <Input
-                                forWhat="name"
-                                labelName="Имя владельца"
+                                forwhat="name"
+                                labelname="Имя владельца"
                                 id="cardName"
-                                inputWidth="355px"
-                                typeAttr="name"
-                                inputName="name"
+                                inputwidth="355px"
+                                typeattr="name"
+                                inputname="name"
+                                defaultValue={this.props.cardName}
                             />
                         </FormRow>
                         <FormRow>
                             <Input
-                                forWhat="cardNumber"
-                                labelName="Номер карты"
+                                forwhat="cardNumber"
+                                labelname="Номер карты"
                                 id="cardNumber"
-                                inputWidth="355px"
-                                typeAttr="cardnumber"
-                                inputName="cardnumber"
+                                inputwidth="355px"
+                                typeattr="cardnumber"
+                                inputname="cardnumber"
                                 onKeyUp={this.cardnumEnter}
                                 maxLength="19"
+                                defaultValue={this.props.cardNumber}
                             />
                         </FormRow>
                         <FormRow>
                             <div className="date">
                                 <Input
-                                    forWhat="expiryDate"
-                                    labelName="MM/YY"
+                                    forwhat="expiryDate"
+                                    labelname="MM/YY"
                                     id="expiryDate"
-                                    inputWidth="160px"
-                                    typeAttr="text"
-                                    inputName="date"
+                                    inputwidth="160px"
+                                    typeattr="text"
+                                    inputname="date"
                                     maxLength="5"
                                     onChange={this.cardDateEnter}
+                                    defaultValue={this.props.expiryDate}
                                 />
                             </div>
                             <Input
-                                forWhat="cvc"
-                                labelName="CVC"
+                                forwhat="cvc"
+                                labelname="CVC"
                                 id="cvc"
-                                inputWidth="160px"
-                                typeAttr="cvc"
-                                inputName="cvc"
+                                inputwidth="160px"
+                                typeattr="cvc"
+                                inputname="cvc"
                                 maxLength="3"
+                                defaultValue={this.props.cvc}
                             />
                         </FormRow>
                     </FormCol>
@@ -152,10 +158,10 @@ export class Profile extends Component {
                                 <div className={logo}>
                                     <img src={Logo} alt="Logo" className={picItem} />
                                 </div>
-                                <div className={carddate}>{this.state.cardDate}</div>
+                                <div className={carddate}>{this.props.expiryDate}</div>
                             </div>
                             <div className={row}>
-                                <div className={cardnum}>{this.state.cardNum}</div>
+                                <div className={cardnum}>{this.props.cardNumber}</div>
                             </div>
                             <div className={row}>
                                 <div className={chip}>
@@ -174,6 +180,11 @@ export class Profile extends Component {
 }
 
 export const ProfileWithAuth = connect(
-    null,
+    (state) => ({
+        cardNumber: state.auth.cardNumber,
+        expiryDate: state.auth.expiryDate,
+        cardName: state.auth.cardName,
+        cvc: state.auth.cvc
+    }),
     {logOut, saveCard}
 )(Profile);

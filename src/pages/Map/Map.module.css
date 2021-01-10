@@ -1,0 +1,48 @@
+.paper {
+    top: 100px;
+    left: 20px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 40%;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    max-width: 486px;
+    border-radius: 10px;
+    z-index: 3;
+}
+
+.choose {
+    padding: 32px 46px 33px 46px;
+}
+
+.readyPaper {
+    top: 100px;
+    left: 20px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 40%;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    max-width: 486px;
+    border-radius: 10px;
+    padding: 39px 51px 39px 41px;
+    z-index: 3;
+}
+
+.readyPaper button {
+    padding: 16px 36px;
+}
+
+.readyPaper h2 {
+    font-size: 36px;
+}
+
+.readyPaperText {
+    font-size: 18px;
+    color: #7B7B7B;
+    margin-bottom: 20px;
+}
