@@ -7,6 +7,7 @@ const initialState = {
     expiryDate: "",
     cardName: "",
     cvc: "",
+    cardIsSaved: Boolean
 }
 
 export default function auth(state = initialState, action) {
@@ -22,8 +23,17 @@ export default function auth(state = initialState, action) {
             return {...state, token: action.payload}
         }
         case SAVE_CARD_TO_STATE: {
-            return {
-                ...state, ...action.payload
+            if(action.payload.cardNumber === undefined ||
+                action.payload.expiryDate === undefined ||
+                action.payload.cardName === undefined ||
+                action.payload.cvc === undefined) {
+                    return {
+                        ...state, cardIsSaved: true
+                    }
+            } else {
+                return {
+                    ...state, ...action.payload, cardIsSaved: false
+                }
             }
         }
         default:

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Button } from "../../components/button/button";
-import { Input } from "../../components/input/input";
+import { InputElem } from "../../components/input/input";
 import './loginForm.css';
 import PropTypes from "prop-types";
 import {connect} from 'react-redux';
@@ -32,10 +32,10 @@ export class LoginForm extends Component {
                     <form className="form" onSubmit={this.authenticate} >
                         <div className="title">Войти</div>
                         <div className="inputComp">
-                            <Input forwhat="email" labelname="Email" id="email" inputwidth="355px" typeattr="email" inputname="email" />
+                            <InputElem forwhat="email" labelname="Email" id="email" inputwidth="355px" typeattr="email" inputname="email" />
                         </div>
                         <div className="inputComp">
-                            <Input forwhat="password" labelname="Пароль" id="password" inputwidth="355px" typeattr="password" inputname="password" />
+                            <InputElem forwhat="password" labelname="Пароль" id="password" inputwidth="355px" typeattr="password" inputname="password" />
                         </div>
                         <div className="restore">
                             <a href="#" className="restore-btn">Забыли пароль?</a>

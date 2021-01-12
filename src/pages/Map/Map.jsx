@@ -19,7 +19,7 @@ export const drawRoute = (map, coordinates) => {
     });
 
     map.addLayer({
-        id: "routedraw",
+        id: "route",
         type: "line",
         source: {
             type: "geojson",
@@ -35,12 +35,10 @@ export const drawRoute = (map, coordinates) => {
         layout: {
             "line-join": "round",
             "line-cap": "round",
-            "symbol-z-order": "source",
         },
         paint: {
             "line-color": "#ffc617",
-            "line-width": 8,
-            "z-index": 5,
+            "line-width": 8
         }
     });
 };
@@ -55,6 +53,7 @@ export class Map extends Component {
             target: "",
             readyRoute: this.props.readyRoute,
             routeIsDone: false,
+            disabled: this.props.cardIsSaved,
         }
     }
 
@@ -65,6 +64,7 @@ export class Map extends Component {
         const main = document.querySelector('.all-sections');
         main.addEventListener("click", this.takeTarget, {capture: true});
         main.addEventListener("click", this.toggleList, {capture: true});
+        console.log(this.props);
         mapboxgl.accessToken =
             "pk.eyJ1IjoiY3JhY2t0aGlzIiwiYSI6ImNraW5td2NvZzEyajUycmxicDh1cXY2dnQifQ.jckoQy0o5_d6yCZV2xWePQ";
         this.map = new mapboxgl.Map({
@@ -77,9 +77,10 @@ export class Map extends Component {
         this.map.resize();
     }
 
-    componentDidUpdate(prevProps, prevState, snapshot) {
+    async componentDidUpdate(prevProps, prevState, snapshot) {
         if(this.props.readyRoute !== prevProps.readyRoute) {
-            this.setState({readyRoute: this.props.readyRoute})
+            await this.setState({readyRoute: this.props.readyRoute});
+            drawRoute(this.map, this.state.readyRoute);
         }
     }
 
@@ -93,9 +94,8 @@ export class Map extends Component {
     loadReadyRoute = async () => {
         const routeOne = this.props.routeOne;
         const routeTwo = this.props.routeTwo;
-        await this.props.loadReadyRoute(routeOne, routeTwo);
+        this.props.loadReadyRoute(routeOne, routeTwo);
         this.setState({routeIsDone: true});
-        drawRoute(this.map, this.state.readyRoute);
     }
 
     takeTarget = (e) => {
@@ -122,9 +122,13 @@ export class Map extends Component {
     }
 
     newOrder = () => {
-        this.setState({
-            routeIsDone: false
-        });
+        this.setState({routeIsDone: false});
+        if (this.map.getLayer('route')) {
+            this.map.removeLayer('route');
+        }
+        if (this.map.getSource('route')) {
+            this.map.removeSource('route');
+        }
     }
 
 
@@ -161,7 +165,12 @@ export class Map extends Component {
                                 />
                             </div>
                             <div className={choose}>
-                                <Button name="Заказать" onClick={this.loadReadyRoute}/>
+                                <Button
+                                    name="Заказать"
+                                    onClick={this.loadReadyRoute}
+                                    type="button"
+                                    disabled={this.state.disabled}
+                                />
                             </div>
                         </Paper>
                     )
@@ -175,4 +184,5 @@ export const MapConnect = connect((state) => ({
     routeOne: state.address.routeOne,
     routeTwo: state.address.routeTwo,
     readyRoute: state.address.readyRoute,
+    cardIsSaved: state.auth.cardIsSaved,
 }), {loadReadyRoute})(Map);

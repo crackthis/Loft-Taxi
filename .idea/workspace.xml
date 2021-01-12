@@ -11,33 +11,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5103b238-3c93-4b4e-94b8-2f3c393a1713" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/mapInput/mapInput.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/mapInput/mapInput.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Map/Map.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/reducers/address.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sagas/addressSaga.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sagas/routeSaga.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Logo/Logo.spec.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/button/button.spec.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/header/header.spec.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/heroLogo/heroLogo.spec.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/input/input.spec.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/mapInput/mapInput.spec.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Map/Map.spec.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/loginForm/loginForm.spec.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/registrationForm/registrationForm.spec.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/authSaga.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/sagas/authSaga.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/button/button.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/button/button.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/button/button.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/button/button.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/header.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/input/input.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/input/input.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Map/Map.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Map/Map.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Profile/Profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Profile/Profile.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/loginForm/loginForm.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/loginForm/loginForm.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/loginForm/loginForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/loginForm/loginForm.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/registrationForm/registrationForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/registrationForm/registrationForm.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/paymentSaga.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/sagas/paymentSaga.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/reducers/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/auth.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/regSaga.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/sagas/regSaga.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -204,7 +199,7 @@
       <workItem from="1609594575685" duration="25959000" />
       <workItem from="1609890404766" duration="9523000" />
       <workItem from="1609905627092" duration="51020000" />
-      <workItem from="1610303985210" duration="7711000" />
+      <workItem from="1610303985210" duration="17731000" />
     </task>
     <servers />
   </component>

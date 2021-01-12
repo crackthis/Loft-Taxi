@@ -3,7 +3,7 @@ import {connect} from "react-redux";
 import {logOut, saveCard} from "../../actions";
 import {HeaderWithAuth} from "../../components/header/header";
 import styled from "styled-components";
-import {Input} from "../../components/input/input";
+import {InputElem} from "../../components/input/input";
 import Logo from "../../shares/content/Logo.png";
 import Chip from "../../shares/content/Chip.png";
 import {logo, picItem, chip, row, cardnum, carddate} from "./Profile.module.css";
@@ -103,7 +103,7 @@ export class Profile extends Component {
                 <ProfileInfo>
                     <FormCol>
                         <FormRow>
-                            <Input
+                            <InputElem
                                 forwhat="name"
                                 labelname="Имя владельца"
                                 id="cardName"
@@ -114,7 +114,7 @@ export class Profile extends Component {
                             />
                         </FormRow>
                         <FormRow>
-                            <Input
+                            <InputElem
                                 forwhat="cardNumber"
                                 labelname="Номер карты"
                                 id="cardNumber"
@@ -128,7 +128,7 @@ export class Profile extends Component {
                         </FormRow>
                         <FormRow>
                             <div className="date">
-                                <Input
+                                <InputElem
                                     forwhat="expiryDate"
                                     labelname="MM/YY"
                                     id="expiryDate"
@@ -140,7 +140,7 @@ export class Profile extends Component {
                                     defaultValue={this.props.expiryDate}
                                 />
                             </div>
-                            <Input
+                            <InputElem
                                 forwhat="cvc"
                                 labelname="CVC"
                                 id="cvc"
@@ -172,7 +172,7 @@ export class Profile extends Component {
                     </FormCol>
                 </ProfileInfo>
                 <div className="enter">
-                    <Button name="Сохранить" typeAttr="submit" />
+                    <Button name="Сохранить" type="submit" disabled={false} />
                 </div>
             </Form>
             </>

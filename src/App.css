@@ -53,3 +53,14 @@ input, button, submit {
     transform: rotate(360deg);
   }
 }
+
+.mapboxgl-ctrl-bottom-right {
+  right: 0;
+  bottom: 0;
+}
+
+.mapboxgl-ctrl-bottom-left, .mapboxgl-ctrl-bottom-right, .mapboxgl-ctrl-top-left, .mapboxgl-ctrl-top-right {
+  position: absolute;
+  pointer-events: none;
+  z-index: 2;
+}
