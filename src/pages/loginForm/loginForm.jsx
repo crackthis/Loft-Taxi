@@ -3,10 +3,10 @@ import { Button } from "../../components/button/button";
 import { InputElem } from "../../components/input/input";
 import './loginForm.css';
 import PropTypes from "prop-types";
-import {connect} from 'react-redux';
+import {connect, useDispatch} from 'react-redux';
 import {authenticate} from "../../actions";
 import {Redirect} from "react-router-dom";
-
+import { useForm } from "react-hook-form";
 
 export class LoginForm extends Component {
 
@@ -27,7 +27,7 @@ export class LoginForm extends Component {
             <>
             {
                 this.props.isLoggedIn ? (
-                    <Redirect to="/profile" />
+                    <Redirect to="/map" />
                 ) : (
                     <form className="form" onSubmit={this.authenticate} >
                         <div className="title">Войти</div>

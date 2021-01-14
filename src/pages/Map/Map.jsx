@@ -80,6 +80,7 @@ export class Map extends Component {
     async componentDidUpdate(prevProps, prevState, snapshot) {
         if(this.props.readyRoute !== prevProps.readyRoute) {
             await this.setState({readyRoute: this.props.readyRoute});
+            console.log(this.state.readyRoute);
             drawRoute(this.map, this.state.readyRoute);
         }
     }
