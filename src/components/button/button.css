@@ -1,0 +1,14 @@
+.btn {
+    padding: 16px 141px;
+    background: #FDBF5A;
+    border-radius: 70px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #000;
+    font-weight: normal;
+}
+
+.disabled {
+    background: #D8D7D5;
+    color: #737373;
+}

@@ -1,22 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
-
-body {
-  font-family: Roboto;
-  padding: 0;
-}
-
 .App {
   text-align: center;
-}
-
-.all-sections {
-  min-height: 100vh;
-  position: relative;
-  display: flex;
-}
-
-input, button, submit {
-  border:none;
 }
 
 .App-logo {
@@ -52,15 +35,4 @@ input, button, submit {
   to {
     transform: rotate(360deg);
   }
-}
-
-.mapboxgl-ctrl-bottom-right {
-  right: 0;
-  bottom: 0;
-}
-
-.mapboxgl-ctrl-bottom-left, .mapboxgl-ctrl-bottom-right, .mapboxgl-ctrl-top-left, .mapboxgl-ctrl-top-right {
-  position: absolute;
-  pointer-events: none;
-  z-index: 2;
 }

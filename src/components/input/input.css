@@ -1,0 +1,15 @@
+.input {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.input-item {
+    border-bottom: 2px solid #E4E4E4;
+    height: 44px;
+}
+
+.label {
+    font-weight: bold;
+    font-size: 16px;
+}

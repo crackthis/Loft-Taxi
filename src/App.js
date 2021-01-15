@@ -1,25 +1,30 @@
-import logo from './logo.svg';
+import React, {Component} from "react";
+import { AuthComponentWithAuth } from "./pages/AuthComponent/AuthComponent";
+import {MapConnect} from "./pages/Map/Map";
+import {ProfileWithAuth} from "./pages/Profile/Profile";
+import {connect} from "react-redux";
+import PropTypes from "prop-types";
 import './App.css';
+import { Switch, Route } from "react-router-dom";
+import { PrivateRoute } from "./PrivateRoute";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export class App extends Component {
+
+    render() {
+     return <>
+         <main data-testid="container" className="all-sections">
+             <Switch>
+                 <Route exact path="/" component={AuthComponentWithAuth} />
+                 <PrivateRoute path="/map" component={MapConnect} />
+                 <PrivateRoute exact path="/profile" component={ProfileWithAuth} />
+             </Switch>
+         </main>
+     </>;
+    }
 }
 
-export default App;
+App.propTypes = {
+    isLoggedIn: PropTypes.bool
+};
+
+export default connect((state) => ({ isLoggedIn: state.auth.isLoggedIn }))(App);
