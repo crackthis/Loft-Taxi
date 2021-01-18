@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/Loft-Taxi/static/css/main.3dec6df1.chunk.css",
+    "main.js": "/Loft-Taxi/static/js/main.60ca6d72.chunk.js",
+    "main.js.map": "/Loft-Taxi/static/js/main.60ca6d72.chunk.js.map",
+    "runtime-main.js": "/Loft-Taxi/static/js/runtime-main.66675dc3.js",
+    "runtime-main.js.map": "/Loft-Taxi/static/js/runtime-main.66675dc3.js.map",
+    "static/js/2.592ea7f0.chunk.js": "/Loft-Taxi/static/js/2.592ea7f0.chunk.js",
+    "static/js/2.592ea7f0.chunk.js.map": "/Loft-Taxi/static/js/2.592ea7f0.chunk.js.map",
+    "static/js/3.b9ed722d.chunk.js": "/Loft-Taxi/static/js/3.b9ed722d.chunk.js",
+    "static/js/3.b9ed722d.chunk.js.map": "/Loft-Taxi/static/js/3.b9ed722d.chunk.js.map",
+    "index.html": "/Loft-Taxi/index.html",
+    "static/css/main.3dec6df1.chunk.css.map": "/Loft-Taxi/static/css/main.3dec6df1.chunk.css.map",
+    "static/js/2.592ea7f0.chunk.js.LICENSE.txt": "/Loft-Taxi/static/js/2.592ea7f0.chunk.js.LICENSE.txt",
+    "static/media/AuthComponent.css": "/Loft-Taxi/static/media/map.ad6fab83.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.66675dc3.js",
+    "static/js/2.592ea7f0.chunk.js",
+    "static/css/main.3dec6df1.chunk.css",
+    "static/js/main.60ca6d72.chunk.js"
+  ]
+}
